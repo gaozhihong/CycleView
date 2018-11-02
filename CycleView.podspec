@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.description  = "cycleview for you app"
   s.homepage     = "https://github.com/gaozhihong/CycleView"
   s.license      = {:type => "MIT",:file => "LICENSE"}
-   s.platform     = :ios, "5.0"
+   s.platform     = :ios
   s.source       = { :git => "https://github.com/gaozhihong/CycleView.git", :tag => "#{s.version}" }
 
   s.source_files  = "CycleView/*"
