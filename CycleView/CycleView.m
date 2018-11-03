@@ -87,17 +87,6 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
     self.pageControl.currentPage = currentPage;
     
 }
--(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    NSInteger pageIndex = scrollView.contentOffset.x/scrollView.bounds.size.width;
-    if (pageIndex == KSection_Num *self.dataList.count-1) {
-        pageIndex = self.dataList.count;
-        
-    }else if (pageIndex == 0){
-        pageIndex = (KSection_Num -1) *self.dataList.count;
-    }
-    CGFloat x = pageIndex *scrollView.bounds.size.width;
-    [self.collectionView setContentOffset:CGPointMake(x, 0) animated:NO];
-}
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self removeTimer];
 }
